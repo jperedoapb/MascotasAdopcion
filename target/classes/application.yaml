@@ -1,0 +1,23 @@
+#spring.application.name=Mascotas
+#springdoc.swagger-ui.path=/swagger-ui-custom.html
+#springdoc.swagger-ui.operationsSorter=method
+spring:
+  application:
+    name: Mascotas
+  sql:
+    init:
+      mode: always
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+springdoc:
+  swagger-ui:
+    path: /swagger-ui-custom.html
+    operationsSorter: method
